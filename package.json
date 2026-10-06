@@ -1,0 +1,35 @@
+{
+  "name": "finance-app",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Base profissional para uma aplicação de gestão financeira pessoal.",
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@finance/web",
+    "dev:api": "npm run dev --workspace=@finance/api",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "test:e2e": "playwright test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "db:generate": "npm run db:generate --workspace=@finance/db",
+    "db:migrate": "npm run db:migrate --workspace=@finance/db",
+    "db:seed": "npm run db:seed --workspace=@finance/db"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.5",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.19.1"
+  }
+}

@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.pnp.*
+
+# Builds and caches
+dist/
+build/
+coverage/
+.vite/
+.turbo/
+*.tsbuildinfo
+*.log
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*token*.json
+secrets/
+
+# Local databases and uploads
+*.db
+*.sqlite
+uploads/
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Legacy/local Python environments
+**/.venv/
+**/venv/
+**/ambiente/
+**/__pycache__/
+**/*.py[cod]
+
+# Playwright
+playwright-report/
+test-results/
+

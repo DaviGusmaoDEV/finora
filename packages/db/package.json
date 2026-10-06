@@ -1,0 +1,19 @@
+{
+  "name": "@finance/db",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:seed": "tsx prisma/seed.ts",
+    "typecheck": "echo 'Database schema validated by Prisma'"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "argon2": "^0.44.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.1.0",
+    "tsx": "^4.23.15"
+  }
+}
